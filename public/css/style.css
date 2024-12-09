@@ -1,0 +1,228 @@
+body{
+    font-family: "Poppins", serif;
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
+}
+
+.container{
+    flex:1;
+}
+
+/* Sign Up */
+.loginSignup{
+    text-align: center ;
+}
+
+.signup{
+    text-decoration: none;
+}
+
+
+/* NavBar */
+
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-clipboard-list{
+    color: #ef476f;
+    font-size: 2rem;
+}
+
+.nav-link{
+    font-size: 1.2rem;
+}
+
+.nav-link:hover{
+    color: #073b4c;
+    font-weight: 500;
+}
+
+/* Footer */
+
+.f-info{
+    color:white;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    margin: 0 1rem;
+    color:white;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+    color:#ffd166;
+}
+
+.f-info{
+    height:8rem;
+    background-color:#073b4c;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items:space-evenly;
+    padding: 1rem 0;
+}
+
+.f-info-socials, .f-info-brand, .f-info-links{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.f-info-socials i{
+    font-size: 1.2rem;
+    text-align: center;
+    margin:0 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.f-info-socials i:hover{
+    color:#ffd166;
+    transform: scale(1.2);
+}
+
+/* Index Page Cards */
+
+.header-card, .task-card{
+    /* width:90%; */
+    height:4rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.header-card{
+    background-color: #118ab2;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-card h1{
+    padding-left: 3rem;
+}
+
+.header-card .btn{
+    font-size: 2rem;
+    padding-right: 3rem;
+    transition: transform 3s ease-in-out 0;
+}
+
+.header-card .btn:hover{
+    transform: scale(1.3);
+}
+
+.task-card{
+    background-color: #ffd166;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.card-btns{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.taskname{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color:black;
+    text-align: left;
+}
+
+.view-btn{
+    display: inline-block;
+    padding: 6px 12px;               /* Adjust padding for button size */
+    background-color: #118ab2;        /* Custom blue color */
+    color: white !important;                     /* White text color */
+    text-align: center;               /* Center the text */
+    text-decoration: none;            /* Remove underline */
+    font-size: 0.3 !important;                  /* Standard font size */
+    font-weight: 400;                 /* Medium font weight */
+    border: 1px solid transparent;    /* Transparent border */
+    border-radius: 5px;               /* Slightly rounded corners */
+    cursor: pointer;                  /* Pointer cursor on hover */
+    margin-right: 3rem;
+    transition: background-color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}
+
+.view-btn:hover,
+.view-btn:focus {
+    background-color: #0d6f9b;        /* Darker shade on hover */
+    text-decoration: none;            /* Ensure no underline on hover */
+}
+
+.task-card input[type="checkbox"] {
+    transform: scale(2);
+    margin-left:3rem;
+}
+
+/* Active state (button clicked) */
+.view-btn:active {
+    background-color: #0b4d66;        /* Even darker shade for active state */
+    border-color: #094050;            /* Border color for active state */
+}
+
+/* Show page */
+
+.card{
+    width:40%;
+    background-color: #06d6a0;
+    border:2px solid black;
+    margin:auto;
+}
+
+.card-header{
+    background-color: #ffd166;
+}
+
+.form-control{
+    background-color: #ffd166;
+}
+
+.form-control:focus{
+    background-color: #ffd166;
+    border-color: #ef476f; 
+    box-shadow: 0 0 5px 2px #ef476f !important; 
+}
+
+.showbtns{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* media queries */
+
+@media(max-width:768px){
+    .header-card,
+    .task-card{
+        width: 90%;
+    }
+    .taskname{
+        font-size: 0.9rem;
+    }
+    .task-card input[type="checkbox"] {
+        transform: scale(1.5) !important;
+        margin-left:1rem !important;
+    }
+    .card-btns{
+        padding-right: 0.3rem;
+    }
+    .resbtn{
+        margin-right: 1rem;
+        padding: 3px 8px;
+    }
+    .card-btns i{
+        font-size: 0.9rem;
+    }
+}

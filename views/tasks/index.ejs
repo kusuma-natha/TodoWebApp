@@ -1,0 +1,30 @@
+<%- layout("layouts/boilerplate") %>
+<body>
+    <div class="header-card">
+        <h1><i>Tasks to do</i></h1>
+        <a class="btn" href="/tasks/new" role="button"><i class="fa-solid fa-plus"></i></a>
+    </div>
+    <% for(let task of allTasks) {%>
+        <div class="task-card">
+            <form method="POST" action="/tasks/<%= task._id %>/toggle">
+                <input type="checkbox" 
+                name="completed" 
+                onchange="this.form.submit()"
+                <%= task.completed ? "checked" : "" %>
+                >
+            </form> 
+            <a href="/tasks/<%= task._id %>" class="taskname"><%= task.task %></a>
+            <div class="card-btns">
+                <a class="view-btn resbtn" role="button" href="/tasks/<%= task._id %>"><i class="fa-solid fa-circle-info"></i></a>
+                <form method="POST" action="/tasks/<%= task._id %>/?_method=DELETE" onsubmit="return confirmDelete();">
+                    <button class="btn btn-danger resbtn"><i class="fa-solid fa-trash-can"></i></button>
+                </form>
+            </div>
+        </div>
+    <% } %>
+    <script>
+        function confirmDelete() {
+            return confirm("Are you sure you want to delete this task?");
+        }
+    </script>
+</body> 

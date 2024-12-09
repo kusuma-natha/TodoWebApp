@@ -1,0 +1,16 @@
+<%- layout("layouts/boilerplate") %>
+<body>
+    <div class="card mt-5">
+        <h5 class="card-header"><%= task.task %></h5>
+        <div class="card-body">
+          <p class="card-title"><b>Due Date:</b> <%= task.dueDate %></p>
+          <p class="card-text"><b>Priority:</b> <%= task.priority %></p>
+          <div class="showbtns">
+            <form method="GET" action="/tasks/<%= task._id %>/edit">
+                <button class="btn btn-dark">Edit</button>
+            </form>
+            <a class="btn btn-dark" href="/tasks">Home</a>
+          </div>
+        </div>
+    </div>
+</body>
